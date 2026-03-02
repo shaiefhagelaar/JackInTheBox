@@ -9,13 +9,13 @@ The video below shows how to set up a clawbot as a personal AI assistent on a VP
 https://youtu.be/C5ir_rQ4L4g?si=kqcTDL77hKjZwTE8
 
 #  To do list
-1. Change the default SSH (Secure SHell protocol).
+1. Change the default SSH (Secure Shell protocol).
 
 2. Signing in with just an SSH key. No root password, defaulting to a SSH key is more secure. **Pro Tip:** Always test your key-based login in a separate terminal before disabling password authentication!
 
 3.  Configuring the ufw Firewall.
 
-4.  Default SSH port will have a honeypot. Instead of a Honeypot you can also install a tarpit
+4.  Default SSH port will have a honeypot. Instead of a Honeypot you can also install a tarpit.
 
 5.  File logging.
 
