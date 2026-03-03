@@ -58,37 +58,50 @@ The video below shows how to set up a clawbot as a personal AI assistent on a VP
 - 2.1 Log in to your VPS instance.
 - 2.2 Choose a Kali distro
 - 2.3 Let the VPS install the distrubution
-- OPTIONAL -
+- OPTIONAL
 - 2.4 Make a backup of fresh server if not provdided
 
 #  To do list (Server)
 
-1.1 Log in to the server with SSH.
+1 Log in to the server with SSH.
 
-- 1.1  Windows Powershell: ssh -i {C:\User\{username}\.ssh\ed_25519.pub {username_server}@{ip_server}}
-- 1.2  Linux CLI: ssh {username_server}@{ip_server}
-- 1.3  When prompted for the password provide the password
-- 1.4  Press return/enter
-- 1.5  Check if CLI changed into {root$ip_server}
-- 1.6  Linux CLI to check for root access: whoami
-- 1.7  When you encounter issues look under # Troubleshooting
+- 1.1  windows Powershell: ssh -i {C:\User\{username}\.ssh\ed_25519.pub {username_server}@{ip_server}}
+- 1.2  linux CLI: ssh {username_server}@{ip_server}
+- 1.3  when prompted for the password provide the password
+- 1.4  press return/enter
+- 1.5  check if CLI changed into {root$ip_server}
+- 1.6  linux CLI to check for root access: whoami
+- 1.7  when you encounter issues look under # Troubleshooting
+
+2. Change the default SSH (Secure Shell configureration file aka conf) Linux CLI.
+
+- 2.1  From you home/root directory you'll edit the file with a text editor of your preference: [sudo] [vim] or [nano] {/etc/ssh/ssh_config}
+- 2.2  change port to your liking (make sure no other services run on that port)
+- 2.2  add without the brackets { }
+- 2.3  add without the brackets { }
+- 2.4  add without the brackets { }
+- 2.5  add without the brackets { }
+- 2.6  set to { }
+
+It should look like this:
 
 
-2. Change the default SSH (Secure Shell protocol) Linux CLI.
 
-- 2.1  From you home/root directory you'll edit the file with a text editor of your preference: [sudo vim/nano /etc/ssh/ssh_config]
-- 2.2  Linux CLI: ssh {username_server}@{ip_server}
+3. Signing in with just an SSH key. No root password, defaulting to a SSH key is more secure. **Pro Tip:** Always test your key-based login in a separate terminal before disabling password authentication! Why? You just might lock yourself out of the server.
 
-3. Signing in with just an SSH key. No root password, defaulting to a SSH key is more secure. **Pro Tip:** Always test your key-based login in a separate terminal before disabling password authentication! Why 
+- 3.1  type the following { }
+- 3.2  check if the publickey is generated in the right directory on your machine
+- 3.3  copy the ssh key safely
+- 3.4  paste the key into the right directory
 
 4. Update the system.
    
-- 4.1 sudo apt update && sudo apt upgrade && sudo apt autoremove -y
-- 4.2 If prompted to install dependancies: y
-- 4.3 press return/enter
-- 4.4 reboot
-- 4.5 log back into the server see 0.1/0.2
-- 4.6 sudo ufw default allow outgoing
+- 4.1  sudo apt update && sudo apt upgrade && sudo apt autoremove -y
+- 4.2  If prompted to install dependancies: y
+- 4.3  press return/enter
+- 4.4  reboot
+- 4.5  log back into the server see 1
+- 4.6  sudo ufw default allow outgoing
 - 4.3  sudo ufw default allow outgoing
 - 4.3  sudo ufw default allow outgoing
 
@@ -102,24 +115,32 @@ The video below shows how to set up a clawbot as a personal AI assistent on a VP
 - 5.6  sudo ufw deny 443/tcp
 - 5.7  sudo ufw status verbose
 - 5.8  sudo ufw default allow outgoing
-- 5.9  sudo ufw default allow outgoing
+- 5.9  *
 
 6.  Default SSH port will have a honeypot. Instead of a Honeypot you can also install a tarpit.
 
+- 6.1 
+- 6.2  
+- 6.3  
+
 7.  File logging.
 
-8.  Bash update script that runs during off-peak hours.
+- 7.1 
+- 7.2
+- 7.3 
 
-9.  Bash configure script.
+8.  Minimal bash update script that runs during off-peak hours.
 
-10.  Dependancies
+- 8.1
+- 8.2
 
-- 10.1 Kali Linux (distribution)
-- 10.2 vim
-- 10.3 ufw
-- 10.4 
+9. Dependancies
 
-11.  
+- 9.1 Kali Linux (distribution)
+- 9.2 vim
+- 9.3 ufw
+- 9.4 honeypot
+  
 
 
 # Script install instructions
@@ -128,8 +149,11 @@ The video below shows how to set up a clawbot as a personal AI assistent on a VP
 
 2. Download the server install script
 
-# Troubelshooting
+# Docker image
 
+# Troubleshooting
 
-
+-  make sure your pathing is correct
+-  double check firewall rules and update them accordingly
+-  
 																					EOF
